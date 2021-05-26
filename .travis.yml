@@ -3,13 +3,14 @@ cache:
     - node_modules
     - ~/.npm
 deploy:
-  api_key: 0dbeac88-3f96-4ce1-b717-3d927d98f4de
-  app: platzi-store-backend-jsp
-  keep-history: true
   provide: heroku
   skip-cleanup: true
-  true:
-    repo: JohanSP721/platzi-store-backend
+  keep-history: true
+  api_key: apiKey # desde heroku
+  app: platzi-store-backend
+  on:
+    repo: danibarria/platzi-store-backend
+
 git:
   depth: 3
 language: node_js
