@@ -1,0 +1,25 @@
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+deploy:
+  api_key: 0dbeac88-3f96-4ce1-b717-3d927d98f4de
+  app: platzi-store-backend
+  keep-history: true
+  provide: heroku
+  skip-cleanup: true
+  true:
+    repo: JohanSP721/platzi-store-backend
+git:
+  depth: 3
+language: node_js
+node_js:
+  - "12"
+notifications:
+  email:
+    on_failure: always
+    on_success: always
+    recipients:
+      - johansarmiento_21@live.com
+script:
+  - "yarn test"
